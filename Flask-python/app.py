@@ -60,7 +60,9 @@ def predict():
                 print("Failed to send calories prediction to Node.js server")
 
             # Return predicted calories as JSON response
+            print ("Predicted Calories:", predicted_calories)
             return jsonify({'predicted_calories': predicted_calories})
+           
 
         except Exception as e:
             # Log the error
